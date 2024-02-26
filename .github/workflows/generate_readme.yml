@@ -15,6 +15,7 @@ on:
 env:
   GITHUB_NAME: lrsnowx
   GITHUB_EMAIL: lrsnowx@gmail.com
+  REPO_NAME: blog
 
 jobs:
   sync:
@@ -40,7 +41,7 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
-          python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          python main.py ${{ secrets.G_T }} ${{ env.REPO_NAME }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
         run: |
