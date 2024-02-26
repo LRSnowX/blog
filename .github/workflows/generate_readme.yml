@@ -12,6 +12,10 @@ on:
     paths:
       - main.py
 
+env:
+  GITHUB_NAME: LRSnowX
+  GITHUB_EMAIL: lrsnowx@gmail.com
+
 jobs:
   sync:
     name: Generate README
